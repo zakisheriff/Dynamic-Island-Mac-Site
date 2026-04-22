@@ -15,7 +15,7 @@ export default function Download() {
     'Drag & Drop quick actions',
     'FaceTime & iPhone call alerts',
     'Regular updates & new features',
-    'Built with love by The Atom',
+    'Built by The Atom',
   ];
 
   return (
