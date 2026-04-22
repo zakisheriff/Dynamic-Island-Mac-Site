@@ -2,11 +2,11 @@
 
 const items = [
   'Music Controls', 'Notifications', 'Timer', 'Now Playing',
-  'Battery Alerts', 'Calendar', 'AirDrop', 'Bluetooth',
+  'Battery Alerts', 'Calendar', 'Bluetooth',
   'Volume', 'Brightness', 'System Monitor', 'Drag & Drop',
   'Music Controls', 'Notifications', 'Timer', 'Now Playing',
-  'Battery Alerts', 'Calendar', 'AirDrop', 'Bluetooth',
-  'Volume', 'Brightness', 'System Monitor', 'Drag & Drop',
+  'Battery Alerts', 'Calendar', 'Bluetooth',
+  'Volume', 'Brightness', 'Drag & Drop',
 ];
 
 export default function MarqueeSection() {

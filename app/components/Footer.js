@@ -7,13 +7,12 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-brand-area">
-            <h2 className="footer-eyebrow">Experience liftoff</h2>
             <h1 className="footer-big-title">Dynamic Island</h1>
           </div>
-          
+
           <div className="footer-nav-grid">
             <div className="footer-nav-col">
-              <a href="#download">Download</a>
+              <a href="/Dynamic Island Mac by The Atom.dmg" download>Download</a>
               <a href="#features">Features</a>
               <a href="#showcase">Showcase</a>
               <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>

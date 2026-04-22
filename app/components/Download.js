@@ -44,7 +44,7 @@ export default function Download() {
           <Sparkles size={12} strokeWidth={1.5} />
           Free Forever
         </div>
-        <div className="download-price">$0</div>
+        <div className="download-price">$ 0</div>
         <div className="download-price-note">No subscriptions. No in-app purchases. Ever.</div>
 
         <ul className="download-features">
@@ -65,7 +65,8 @@ export default function Download() {
         </ul>
 
         <motion.a
-          href="#"
+          href="/Dynamic Island Mac by The Atom.dmg"
+          download
           className="download-btn"
           id="download-dmg-btn"
           whileHover={{ scale: 1.02 }}
