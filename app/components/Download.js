@@ -81,7 +81,7 @@ export default function Download() {
 
         <motion.a
           href="/Dynamic Island Mac by The Atom.dmg"
-          download
+          download="Dynamic Island Mac by The Atom.dmg"
           className="download-btn"
           id="download-dmg-btn"
           whileHover={{ scale: 1.02 }}
