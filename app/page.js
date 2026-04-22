@@ -1,6 +1,5 @@
 'use client';
 import { useEffect } from 'react';
-import Nav from './components/Nav';
 import Hero from './components/Hero';
 import HeroVisual from './components/HeroVisual';
 import MarqueeSection from './components/MarqueeSection';
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Particles />
-      <Nav />
       <Hero />
       <HeroVisual />
       <MarqueeSection />

@@ -29,17 +29,6 @@ export default function HeroVisual() {
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="hero-image-wrapper" ref={wrapperRef}>
-          <motion.div
-            className="hero-image-3d"
-            animate={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
-            transition={{ type: 'spring', stiffness: 80, damping: 20 }}
-            style={{ transformStyle: 'preserve-3d' }}
-          >
-            <img src="/hero.png" alt="Dynamic Island Mac — Music Controls" />
-          </motion.div>
-          <div className="hero-image-glow" />
-        </div>
       </motion.div>
     </div>
   );
