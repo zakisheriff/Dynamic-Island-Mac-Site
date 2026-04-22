@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Music, Bell, Timer, Battery } from 'lucide-react';
 
 const listItems = [
@@ -11,8 +11,6 @@ const listItems = [
 ];
 
 export default function Showcase() {
-  const sectionRef = useRef(null);
-  const inView = useInView(sectionRef, { once: true, margin: '-100px' });
   const cardRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 4, y: -6 });
 
@@ -31,12 +29,13 @@ export default function Showcase() {
   }, []);
 
   return (
-    <section className="showcase-section" id="showcase" ref={sectionRef}>
+    <section className="showcase-section" id="showcase">
       <div className="showcase-grid">
         <motion.div
           className="showcase-visual"
           initial={{ opacity: 0, x: -60 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <div ref={cardRef}>
@@ -55,7 +54,8 @@ export default function Showcase() {
                       key={i}
                       className="showcase-list-item"
                       initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
                       <div className="showcase-list-icon">
@@ -73,7 +73,8 @@ export default function Showcase() {
         <motion.div
           className="showcase-content"
           initial={{ opacity: 0, x: 60 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="section-eyebrow">Showcase</div>
@@ -91,7 +92,8 @@ export default function Showcase() {
                 key={i}
                 className="showcase-tag"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
               >
                 {tag}

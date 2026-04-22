@@ -1,6 +1,5 @@
 'use client';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Music, Bell, Timer, Phone, FolderInput, Battery } from 'lucide-react';
 
 const features = [
@@ -13,16 +12,14 @@ const features = [
 ];
 
 function FeatureCard({ feature, index }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
   const Icon = feature.icon;
 
   return (
     <motion.div
-      ref={ref}
       className={`bento-card ${feature.span ? 'span-2' : ''}`}
       initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.8, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="bento-icon">
@@ -35,16 +32,13 @@ function FeatureCard({ feature, index }) {
 }
 
 export default function Features() {
-  const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: '-80px' });
-
   return (
     <section className="section" id="features">
       <motion.div
         className="section-header"
-        ref={headerRef}
         initial={{ opacity: 0, y: 40 }}
-        animate={headerInView ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="section-eyebrow">Features</div>

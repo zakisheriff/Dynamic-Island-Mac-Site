@@ -1,12 +1,8 @@
 'use client';
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Check, Download as DownloadIcon, Sparkles } from 'lucide-react';
 
 export default function Download() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
-
   const featureList = [
     'Full Dynamic Island experience',
     'Music controls & Now Playing',
@@ -19,11 +15,12 @@ export default function Download() {
   ];
 
   return (
-    <section className="download-section" id="download" ref={ref}>
+    <section className="download-section" id="download">
       <motion.div
         className="section-header"
         initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="section-eyebrow">Pricing</div>
@@ -39,7 +36,8 @@ export default function Download() {
       <motion.div
         className="download-card"
         initial={{ opacity: 0, y: 50, scale: 0.97 }}
-        animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="download-badge">
@@ -54,7 +52,8 @@ export default function Download() {
             <motion.li
               key={i}
               initial={{ opacity: 0, x: -16 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
             >
               <span className="download-check">
