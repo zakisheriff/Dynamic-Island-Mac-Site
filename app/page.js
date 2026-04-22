@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import HeroVisual from './components/HeroVisual';
 import MarqueeSection from './components/MarqueeSection';
 import Features from './components/Features';
 import Showcase from './components/Showcase';
@@ -15,6 +16,7 @@ export default function Home() {
       <Particles />
       <Nav />
       <Hero />
+      <HeroVisual />
       <MarqueeSection />
       <Features />
       <Showcase />

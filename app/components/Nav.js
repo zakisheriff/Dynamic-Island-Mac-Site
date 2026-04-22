@@ -20,7 +20,6 @@ export default function Nav() {
     >
       <div className="nav-logo">
         <a href="#" className="nav-logo-link">
-          <img src="/icon.png" alt="Dynamic Island Mac" className="nav-logo-img" />
           <span className="nav-brand">Dynamic Island Mac</span>
         </a>
         <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer" className="nav-by">

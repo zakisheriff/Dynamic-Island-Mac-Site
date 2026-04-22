@@ -15,7 +15,6 @@ export default function Footer() {
       </div>
       <div className="footer-links">
         <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="mailto:connect.theatom@gmail.com">Contact</a>
         <a href="https://www.theatom.lk/privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
       </div>

@@ -1,7 +1,6 @@
 'use client';
-import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, ChevronDown } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -10,23 +9,6 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function Hero() {
-  const wrapperRef = useRef(null);
-  const [tilt, setTilt] = useState({ rotateX: 6, rotateY: -4 });
-
-  useEffect(() => {
-    const handleMouse = (e) => {
-      if (!wrapperRef.current) return;
-      const rect = wrapperRef.current.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const rotateX = ((e.clientY - cy) / rect.height) * 10;
-      const rotateY = ((e.clientX - cx) / rect.width) * -10;
-      setTilt({ rotateX, rotateY });
-    };
-    window.addEventListener('mousemove', handleMouse);
-    return () => window.removeEventListener('mousemove', handleMouse);
-  }, []);
-
   return (
     <section className="hero">
       <div className="hero-ambient">
@@ -36,13 +18,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <motion.div {...fadeUp(0.2)}>
-          <div className="hero-badge">
-            <span className="hero-badge-dot" />
-            <span className="hero-badge-text">100% Free & Open Source</span>
-          </div>
-        </motion.div>
-
         <motion.h1 {...fadeUp(0.35)}>
           Dynamic Island
           <span className="line-2">for your Mac</span>
@@ -60,25 +35,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      <motion.div
-        className="hero-visual"
-        initial={{ opacity: 0, y: 60, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <div className="hero-image-wrapper" ref={wrapperRef}>
-          <motion.div
-            className="hero-image-3d"
-            animate={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
-            transition={{ type: 'spring', stiffness: 80, damping: 20 }}
-            style={{ transformStyle: 'preserve-3d' }}
-          >
-            <img src="/hero.png" alt="Dynamic Island Mac — Music Controls" />
-          </motion.div>
-          <div className="hero-image-glow" />
-        </div>
-      </motion.div>
     </section>
   );
 }
