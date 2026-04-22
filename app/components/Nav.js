@@ -18,13 +18,15 @@ export default function Nav() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
-      <a href="#" className="nav-logo">
-        <img src="/Logo-Dynamic.png" alt="Dynamic Island Mac" className="nav-logo-img" />
-        <span className="nav-logo-text">
+      <div className="nav-logo">
+        <a href="#" className="nav-logo-link">
+          <img src="/icon.png" alt="Dynamic Island Mac" className="nav-logo-img" />
           <span className="nav-brand">Dynamic Island Mac</span>
-          <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer" className="nav-by">by The Atom</a>
-        </span>
-      </a>
+        </a>
+        <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer" className="nav-by">
+          by The Atom
+        </a>
+      </div>
 
       <div className="nav-center">
         <a href="#features">Features</a>
@@ -32,7 +34,6 @@ export default function Nav() {
         <a href="#download">Download</a>
         <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>
       </div>
-
     </motion.nav>
   );
 }

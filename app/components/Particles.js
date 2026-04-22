@@ -1,7 +1,13 @@
 'use client';
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
 export default function Particles() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const particles = useMemo(() => {
     return Array.from({ length: 14 }, (_, i) => {
       const left = Math.random() * 100;
@@ -12,6 +18,8 @@ export default function Particles() {
       return { left, delay, duration, size, opacity, key: i };
     });
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="particles-container">
