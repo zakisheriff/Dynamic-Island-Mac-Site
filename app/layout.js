@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  metadataBase: new URL('https://dynamicisland.theatom.lk'),
+  metadataBase: new URL('https://dynamicislandmac.theatom.lk'),
   title: 'Dynamic Island Mac — by The Atom',
   description: 'The Best Dynamic Island for Mac. Bring the iOS Dynamic Island experience to your macOS. Music controls, notifications, timers, and more. 100% Free by The Atom.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: 'Dynamic Island Mac — by The Atom',
     description: 'Bring the Dynamic Island experience to your Mac. 100% Free.',
-    url: 'https://dynamicisland.theatom.lk',
+    url: 'https://dynamicislandmac.theatom.lk',
     siteName: 'Dynamic Island Mac by The Atom',
     images: [
       {

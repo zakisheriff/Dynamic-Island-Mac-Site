@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dynamicisland.theatom.lk/sitemap.xml
+Sitemap: https://dynamicislandmac.theatom.lk/sitemap.xml
