@@ -26,10 +26,15 @@ export default function Showcase() {
       <div className="showcase-grid">
         <motion.div
           className="showcase-visual"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ 
+            duration: 1.5, 
+            ease: [0.16, 1, 0.3, 1],
+            opacity: { duration: 1.2 },
+            filter: { duration: 1.5 }
+          }}
         >
           <div ref={cardRef}>
             <motion.div
@@ -76,10 +81,16 @@ export default function Showcase() {
 
         <motion.div
           className="showcase-content"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 40, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ 
+            duration: 1.5, 
+            delay: 0.2, 
+            ease: [0.16, 1, 0.3, 1],
+            opacity: { duration: 1.2, delay: 0.2 },
+            filter: { duration: 1.5, delay: 0.2 }
+          }}
         >
           <div className="section-eyebrow">Showcase</div>
           <h2 className="section-heading">
@@ -95,10 +106,14 @@ export default function Showcase() {
               <motion.span
                 key={i}
                 className="showcase-tag"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.9, filter: 'blur(4px)' }}
+                whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 + i * 0.08 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.6 + i * 0.1,
+                  ease: [0.16, 1, 0.3, 1]
+                }}
               >
                 {tag}
               </motion.span>

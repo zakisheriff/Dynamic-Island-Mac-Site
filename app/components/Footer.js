@@ -2,12 +2,30 @@
 import { motion } from 'framer-motion';
 
 export default function Footer() {
+  const reveal = {
+    initial: { opacity: 0, y: 20, filter: 'blur(10px)' },
+    whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+    viewport: { once: true },
+    transition: { duration: 1.4, ease: [0.16, 1, 0.3, 1] }
+  };
+
   return (
     <footer className="footer-section">
-      <div className="footer-container">
+      <motion.div 
+        className="footer-container"
+        {...reveal}
+      >
         <div className="footer-top">
           <div className="footer-brand-area">
-            <h1 className="footer-big-title">Dynamic Island</h1>
+            <motion.h1 
+              className="footer-big-title"
+              initial={{ opacity: 0, y: 40, filter: 'blur(20px)' }}
+              whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Dynamic Island
+            </motion.h1>
           </div>
 
           <div className="footer-nav-grid">
@@ -26,7 +44,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
+        <motion.div 
+          className="footer-bottom"
+          initial={{ opacity: 0, filter: 'blur(8px)' }}
+          whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
           <div className="footer-legal">
             <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer" className="footer-atom-logo">
               The Atom
@@ -37,8 +61,8 @@ export default function Footer() {
             <a href="https://www.theatom.lk/privacy">Privacy</a>
             <a href="https://www.theatom.lk/terms">Terms</a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 }

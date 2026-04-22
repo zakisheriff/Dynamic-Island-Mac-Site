@@ -3,9 +3,15 @@ import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, delay, ease: [0.16, 1, 0.3, 1] },
+  initial: { opacity: 0, y: 20, filter: 'blur(10px)' },
+  animate: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  transition: { 
+    duration: 1.4, 
+    delay, 
+    ease: [0.16, 1, 0.3, 1],
+    opacity: { duration: 1.2, delay },
+    filter: { duration: 1.4, delay }
+  },
 });
 
 export default function Hero() {

@@ -17,10 +17,16 @@ function FeatureCard({ feature, index }) {
   return (
     <motion.div
       className={`bento-card ${feature.span ? 'span-2' : ''}`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.8, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ 
+        duration: 1.2, 
+        delay: index * 0.1, 
+        ease: [0.16, 1, 0.3, 1],
+        opacity: { duration: 1 },
+        filter: { duration: 1.2 }
+      }}
     >
       <div className="bento-icon">
         <Icon size={20} strokeWidth={1.5} />
@@ -36,10 +42,15 @@ export default function Features() {
     <section className="section" id="features">
       <motion.div
         className="section-header"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
+        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ 
+          duration: 1.4, 
+          ease: [0.16, 1, 0.3, 1],
+          opacity: { duration: 1.2 },
+          filter: { duration: 1.4 }
+        }}
       >
         <div className="section-eyebrow">Features</div>
         <h2 className="section-heading">

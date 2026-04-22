@@ -18,10 +18,15 @@ export default function Download() {
     <section className="download-section" id="download">
       <motion.div
         className="section-header"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
+        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ 
+          duration: 1.4, 
+          ease: [0.16, 1, 0.3, 1],
+          opacity: { duration: 1.2 },
+          filter: { duration: 1.4 }
+        }}
       >
         <div className="section-eyebrow">Pricing</div>
         <h2 className="section-heading">
@@ -35,10 +40,16 @@ export default function Download() {
 
       <motion.div
         className="download-card"
-        initial={{ opacity: 0, y: 50, scale: 0.97 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        initial={{ opacity: 0, y: 30, scale: 0.98, filter: 'blur(15px)' }}
+        whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ 
+          duration: 1.5, 
+          delay: 0.2, 
+          ease: [0.16, 1, 0.3, 1],
+          opacity: { duration: 1.2, delay: 0.2 },
+          filter: { duration: 1.5, delay: 0.2 }
+        }}
       >
         <div className="download-badge">
           <Sparkles size={12} strokeWidth={1.5} />
@@ -51,10 +62,14 @@ export default function Download() {
           {featureList.map((item, i) => (
             <motion.li
               key={i}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -10, filter: 'blur(4px)' }}
+              whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 0.5 + i * 0.08, 
+                ease: [0.16, 1, 0.3, 1] 
+              }}
             >
               <span className="download-check">
                 <Check size={12} strokeWidth={2.5} />
