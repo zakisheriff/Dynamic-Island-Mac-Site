@@ -20,7 +20,6 @@ export default function Home() {
       <Features />
       <Showcase />
       <Download />
-      <CTA />
       <Footer />
     </>
   );

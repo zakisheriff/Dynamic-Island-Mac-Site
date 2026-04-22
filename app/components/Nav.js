@@ -33,7 +33,6 @@ export default function Nav() {
         <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>
       </div>
 
-      <a href="#download" className="nav-cta">Download Free</a>
     </motion.nav>
   );
 }

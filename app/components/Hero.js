@@ -58,10 +58,6 @@ export default function Hero() {
             <Download size={18} strokeWidth={2} />
             <span>Download for Mac</span>
           </a>
-          <a href="#features" className="btn-ghost">
-            Explore Features
-            <ChevronDown size={16} strokeWidth={2} />
-          </a>
         </motion.div>
       </div>
 
