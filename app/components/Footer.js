@@ -3,21 +3,43 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <motion.footer
-      className="footer"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="footer-left">
-        © {new Date().getFullYear()} <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>. All rights reserved.
+    <footer className="footer-section">
+      <div className="footer-container">
+        <div className="footer-top">
+          <div className="footer-brand-area">
+            <h2 className="footer-eyebrow">Experience liftoff</h2>
+            <h1 className="footer-big-title">Dynamic Island</h1>
+          </div>
+          
+          <div className="footer-nav-grid">
+            <div className="footer-nav-col">
+              <a href="#download">Download</a>
+              <a href="#features">Features</a>
+              <a href="#showcase">Showcase</a>
+              <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>
+            </div>
+            <div className="footer-nav-col">
+              <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">Blog</a>
+              <a href="mailto:connect.theatom@gmail.com">Contact</a>
+              <a href="https://www.theatom.lk/privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://www.theatom.lk/terms" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="footer-legal">
+            <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer" className="footer-atom-logo">
+              The Atom
+            </a>
+          </div>
+          <div className="footer-copyright">
+            <span>© {new Date().getFullYear()}</span>
+            <a href="https://www.theatom.lk/privacy">Privacy</a>
+            <a href="https://www.theatom.lk/terms">Terms</a>
+          </div>
+        </div>
       </div>
-      <div className="footer-links">
-        <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>
-        <a href="mailto:connect.theatom@gmail.com">Contact</a>
-        <a href="https://www.theatom.lk/privacy" target="_blank" rel="noopener noreferrer">Privacy</a>
-      </div>
-    </motion.footer>
+    </footer>
   );
 }

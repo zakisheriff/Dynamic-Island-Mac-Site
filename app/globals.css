@@ -719,35 +719,88 @@ body {
 /* ═══════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════ */
-.footer {
-  padding: 40px 48px;
-  border-top: 1px solid var(--border);
+.footer-section {
+  padding: 80px 48px 40px;
+  max-width: 1400px; margin: 0 auto;
+}
+.footer-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 35px;
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-top {
   display: flex; justify-content: space-between;
-  align-items: center;
-  max-width: 1280px; margin: 0 auto;
+  margin-bottom: 120px;
+  gap: 60px;
 }
-.footer-left {
-  font-size: 0.8rem;
-  color: var(--text-tertiary);
-  font-weight: 800;
+.footer-brand-area {
+  flex: 1;
 }
-.footer-left a {
+.footer-eyebrow {
+  font-size: 1.5rem; font-weight: 800;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+.footer-big-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: var(--text);
+  margin-left: -0.05em;
+}
+.footer-nav-grid {
+  display: flex; gap: 80px;
+}
+.footer-nav-col {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.footer-nav-col a {
+  font-size: 1.1rem; font-weight: 800;
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s;
 }
-.footer-left a:hover { color: var(--text); }
-.footer-links {
-  display: flex; gap: 28px;
+.footer-nav-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
 }
-.footer-links a {
-  font-size: 0.8rem;
-  color: var(--text-tertiary);
+.footer-atom-logo {
+  font-size: 1.5rem; font-weight: 900;
+  color: var(--text);
   text-decoration: none;
-  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.footer-copyright {
+  display: flex; gap: 24px;
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--text-tertiary);
+}
+.footer-copyright a {
+  color: inherit; text-decoration: none;
   transition: color 0.3s;
 }
-.footer-links a:hover { color: var(--text); }
+.footer-copyright a:hover { color: var(--text-secondary); }
+
+@media (max-width: 1024px) {
+  .footer-top { flex-direction: column; gap: 80px; }
+  .footer-container { padding: 60px 40px; }
+  .footer-big-title { font-size: 15vw; }
+}
+@media (max-width: 768px) {
+  .footer-section { padding: 40px 20px; }
+  .footer-container { padding: 48px 24px; }
+  .footer-nav-grid { gap: 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 32px; }
+}
 
 /* ═══════════════════════════════════════
    PARTICLES
