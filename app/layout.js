@@ -18,8 +18,8 @@ export const metadata = {
   ],
   authors: [{ name: 'The Atom', url: 'https://www.theatom.lk' }],
   icons: {
-    icon: '/Logo-Dynamic.png',
-    apple: '/Logo-Dynamic.png',
+    icon: '/icon.png',
+    apple: '/icon.png',
   },
   openGraph: {
     title: 'Dynamic Island Mac — by The Atom',
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/Logo-Dynamic.png" />
+        <link rel="icon" href="/icon.png" />
       </head>
       <body>{children}</body>
     </html>

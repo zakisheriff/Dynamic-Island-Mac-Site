@@ -6,7 +6,6 @@ import MarqueeSection from './components/MarqueeSection';
 import Features from './components/Features';
 import Showcase from './components/Showcase';
 import Download from './components/Download';
-import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Particles from './components/Particles';
 

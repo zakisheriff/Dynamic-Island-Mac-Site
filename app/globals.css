@@ -235,6 +235,7 @@ body {
   text-decoration: none; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;
   transition: all 0.5s var(--ease);
   letter-spacing: -0.02em;
+  cursor: pointer;
 }
 .btn-primary:hover {
   transform: translateY(-4px);
