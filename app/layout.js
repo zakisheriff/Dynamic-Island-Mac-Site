@@ -17,6 +17,10 @@ export const metadata = {
     'Free Mac Apps',
   ],
   authors: [{ name: 'The Atom', url: 'https://www.theatom.lk' }],
+  icons: {
+    icon: '/Logo-Dynamic.png',
+    apple: '/Logo-Dynamic.png',
+  },
   openGraph: {
     title: 'Dynamic Island Mac — by The Atom',
     description: 'Bring the Dynamic Island experience to your Mac. 100% Free.',
@@ -24,10 +28,10 @@ export const metadata = {
     siteName: 'Dynamic Island Mac by The Atom',
     images: [
       {
-        url: '/hero.png',
-        width: 1200,
-        height: 630,
-        alt: 'Dynamic Island Mac by The Atom',
+        url: '/Logo-Dynamic.png',
+        width: 1024,
+        height: 1024,
+        alt: 'Dynamic Island Mac Logo',
       },
     ],
     locale: 'en_US',
@@ -37,7 +41,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Dynamic Island Mac — by The Atom',
     description: 'Bring the Dynamic Island experience to your Mac. 100% Free.',
-    images: ['/hero.png'],
+    images: ['/Logo-Dynamic.png'],
   },
   robots: {
     index: true,
@@ -49,7 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Logo-Dynamic.png" />
       </head>
       <body>{children}</body>
     </html>
