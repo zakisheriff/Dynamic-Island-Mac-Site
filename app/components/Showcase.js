@@ -1,14 +1,7 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Music, Bell, Timer, Battery } from 'lucide-react';
-
-const listItems = [
-  { icon: Music, text: 'Now Playing — Lavender Haze' },
-  { icon: Bell, text: '3 new notifications' },
-  { icon: Timer, text: 'Timer — 04:32 remaining' },
-  { icon: Battery, text: 'Battery — 87% Charged' },
-];
+import { Play, SkipBack, SkipForward, Radio } from 'lucide-react';
 
 export default function Showcase() {
   const cardRef = useRef(null);
@@ -40,31 +33,42 @@ export default function Showcase() {
         >
           <div ref={cardRef}>
             <motion.div
-              className="showcase-card-3d"
+              className="player-card-3d"
               animate={{ rotateX: tilt.x, rotateY: tilt.y }}
               transition={{ type: 'spring', stiffness: 60, damping: 18 }}
               style={{ transformStyle: 'preserve-3d' }}
             >
-              <div className="showcase-notch-demo" />
-              <div className="showcase-list">
-                {listItems.map((item, i) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={i}
-                      className="showcase-list-item"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    >
-                      <div className="showcase-list-icon">
-                        <Icon size={16} strokeWidth={1.5} />
-                      </div>
-                      <span className="showcase-list-text">{item.text}</span>
-                    </motion.div>
-                  );
-                })}
+              {/* iOS Music Player UI */}
+              <div className="player-header">
+                <img 
+                  src="/JVKE_-_Golden_Hour.png" 
+                  alt="Album Art" 
+                  className="player-album-art" 
+                />
+                <div className="player-info">
+                  <h4 className="player-title">Golden Hour</h4>
+                  <p className="player-artist">JVKE</p>
+                </div>
+                <div className="player-more">
+                   <div className="dot-group"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+
+              <div className="player-progress-container">
+                <div className="player-time">0:05</div>
+                <div className="player-progress-bar">
+                  <div className="player-progress-fill" style={{ width: '15%' }} />
+                </div>
+                <div className="player-time">-3:08</div>
+              </div>
+
+              <div className="player-controls">
+                <SkipBack fill="white" size={32} />
+                <Play fill="white" size={38} className="play-icon" />
+                <SkipForward fill="white" size={32} />
+                <div className="player-airplay">
+                  <Radio size={20} strokeWidth={2.5} />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -87,7 +91,7 @@ export default function Showcase() {
             in the background while you focus on what matters.
           </p>
           <div className="showcase-tags">
-            {['Hover to Expand', 'Always Visible', 'Native Performance', 'Zero Config'].map((tag, i) => (
+            {['Music Controls', 'Live Activities', 'System Alerts', 'Zero Lag'].map((tag, i) => (
               <motion.span
                 key={i}
                 className="showcase-tag"
