@@ -1,4 +1,5 @@
 import './globals.css';
+import SmoothScroll from './components/SmoothScroll';
 
 export const metadata = {
   metadataBase: new URL('https://dynamicislandmac.theatom.lk'),
@@ -55,7 +56,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/icon.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   );
 }
