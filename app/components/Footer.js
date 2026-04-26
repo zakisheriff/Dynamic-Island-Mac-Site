@@ -30,7 +30,7 @@ export default function Footer() {
 
           <div className="footer-nav-grid">
             <div className="footer-nav-col">
-              <a href="/Dynamic Island Mac by The Atom.dmg" download="Dynamic Island Mac by The Atom.dmg">Download</a>
+              <a href="/Dynamic%20Island%20Mac%20by%20The%20Atom.dmg" download="Dynamic Island Mac by The Atom.dmg">Download</a>
               <a href="#features">Features</a>
               <a href="#showcase">Showcase</a>
               <a href="https://www.theatom.lk" target="_blank" rel="noopener noreferrer">The Atom</a>

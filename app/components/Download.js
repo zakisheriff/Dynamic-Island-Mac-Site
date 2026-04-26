@@ -80,7 +80,7 @@ export default function Download() {
         </ul>
 
         <motion.a
-          href="/Dynamic Island Mac by The Atom.dmg"
+          href="/Dynamic%20Island%20Mac%20by%20The%20Atom.dmg"
           download="Dynamic Island Mac by The Atom.dmg"
           className="download-btn"
           id="download-dmg-btn"

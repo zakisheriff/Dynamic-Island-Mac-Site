@@ -35,7 +35,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div className="hero-actions" {...fadeUp(0.65)}>
-          <a href="/Dynamic Island Mac by The Atom.dmg" download="Dynamic Island Mac by The Atom.dmg" className="btn-primary" id="hero-download-btn">
+          <a href="/Dynamic%20Island%20Mac%20by%20The%20Atom.dmg" download="Dynamic Island Mac by The Atom.dmg" className="btn-primary" id="hero-download-btn">
             <Download size={18} strokeWidth={2} />
             <span>Download Free</span>
           </a>
