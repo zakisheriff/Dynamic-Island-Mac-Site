@@ -1,5 +1,6 @@
 import './globals.css';
 import SmoothScroll from './components/SmoothScroll';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   metadataBase: new URL('https://dynamicislandmac.theatom.lk'),
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
